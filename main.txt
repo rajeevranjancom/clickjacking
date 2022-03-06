@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Clickjack test Page</title>
+</head>
+
+<body>
+<p>website is vulnerable to clickjacking!</p>
+<iframe src="https://zeenews.india.com/hindi/tags/patna-crime-news.html" width="500" height="500">
+</iframe>
+</body>
+</html>
