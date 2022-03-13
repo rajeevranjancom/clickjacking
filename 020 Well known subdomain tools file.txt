@@ -1,0 +1,47 @@
+Amass
+
+Written by Jeff Foley, Amass is one of our favorite tools when it comes to subdomain discovery
+It’s one of the most powerful terminal-based commands there is for gathering and accumulating large amounts of subdomain data.
+Installation & Commands:
+snap install amass
+amass -d domain.com  (To find the subdomains)
+amass -d adobe.com,microsoft.com -d securitytrails.com (to find multiple domains in single command)
+
+
+SubBrute
+SubBrute is one of the fastest brute-forcing subdomain discovery tools we’ve ever tested. 
+One of its coolest features is the ability to conceal the origin of the subdomain scanning itself, by using open resolvers as proxy to DNS rate-limits.
+SubBrute’s syntax is simple, as you see below:
+./subbrute.py cloudflare.com -o cloudflare.names
+
+
+Knock
+Knock is another Python subdomain scanner tool helping infosec researchers with the intel-gathering process. 
+It works by performing a full DNS zone transfer, and if that fails, it can run a query against the VirusTotal subdomain database.
+
+
+DNSRecon
+DNSRecon is one of the most well-known domain reconnaissance scripts. As with almost every other one on this list, it’s written in Python.
+It works by checking all NS records for AXFR zone transfers, and can be very useful in DNS enumeration for almost any type of records, including MX, SOA, NS, TXT, SPF and SRV
+After downloading the DNSRecon package, you’ll need to install a few required packages with pip:
+pip install -r requirements.txt
+Then you are ready to test it: 
+./dnsrecon.py -d securitytrails.com
+
+
+Sublist3r
+Sublist3r is another Python-based tool that can be used as a massive subdomain scanner. 
+It’s widely used by bug bounty hunters, as well as blue and red teams across the globe for subdomain data collection.
+By querying search engines such as Bing, Yahoo, Google, Baidu and other 3rd party sources like Netcraft or VirusTotal subdomain database, it can be one of the most effective and fastest tools around when you want to find subdomains.
+Sublist3r minimum requirements are Python2 (2.7.x) or Python3 versions (3.4.x)
+clone the Git repo from this link: https://github.com/aboul3la/Sublist3r
+pip install -r requirements.txt
+./sublist3r.py -d securitytrails.com
+python sublist3r.py -d wikipedia.com.com -p 80,443
+
+AltDNS
+AltDNS is a subdomain discovery tool based on work with alterations and permutations.
+Clone the project: https://github.com/infosec-au/altdns
+pip install -r requirements.txt
+Then you are ready to start using AltDNS
+./altdns.py -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt
