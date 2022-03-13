@@ -1,0 +1,10 @@
+BUg Bounty Hunting Tools (BBHT)
+How we can install it?
+
+Installing
+
+   1.git clone https://github.com/nahamsec/bbht.git
+    2.cd bbht
+    3. chmod +x install.sh
+    4. ./install.sh
+
